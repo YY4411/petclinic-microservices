@@ -27,17 +27,17 @@ metadata:
   name: customers-service
 spec:
   rules:
-    - host: petclinic-staging.yildirayyilmaz.com
-      http:
-        paths:
-        - backend:
-            serviceName: customers-service
-            servicePort: 8081
-          path: /api/gateway(/|$)(.*)
-        - backend:
-            serviceName: customers-service
-            servicePort: 8081
-          path: /api/customer(/|$)(.*)
+  - host: petclinic-staging.yildirayyilmaz.com
+    http:
+      paths:
+      - backend:
+          serviceName: customers-service
+          servicePort: 8081
+        path: /api/gateway(/|$)(.*)
+      - backend:
+          serviceName: customers-service
+          servicePort: 8081
+        path: /api/customer(/|$)(.*)
 
 ---
 apiVersion: extensions/v1beta1
